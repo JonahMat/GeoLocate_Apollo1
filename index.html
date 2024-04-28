@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>AR QUILT</title>
+        <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+        <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
+        <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
+    </head>
+
+
+
+
+
+    <!--
+//JPG IMAGES OF THE QUILTS
+<a-assets>
+<img id="AQuilt"
+src="assets/Quilt/AQuilt.jpg">    
+</a-assets>
+
+<a-assets>
+<img id="BQuilt"
+src="assets/Quilt/BQuilt.jpg">    
+</a-assets>
+
+<a-assets>
+<img id="CQuilt"
+src="assets/Quilt/CQuilt.jpg">    
+</a-assets>
+
+<a-assets>
+<img id="DQuilt"
+src="assets/Quilt/DQuilt.jpg">    
+</a-assets>
+
+<a-assets>
+<img id="EQuilt"
+src="assets/Quilt/EQuilt.jpg">    
+</a-assets>
+
+<a-assets>
+<img id="FQuilt"
+src="assets/Quilt/FQuilt.jpg">    
+</a-assets>
+
+<a-assets>
+<img id="GQuilt"
+src="assets/Quilt/GQuilt.jpg">    
+</a-assets>
+
+<a-assets>
+<img id="HQuilt"
+src="assets/Quilt/HQuilt.jpg">    
+</a-assets>
+
+<a-assets>
+<img id="IQuilt"
+src="assets/Quilt/IQuilt.jpg">    
+</a-assets>
+
+<a-assets>
+<img id="JQuilt"
+src="assets/Quilt/JQuilt.jpg">    
+</a-assets>
+
+<a-assets>
+<img id="KQuilt"
+src="assets/Quilt/KQuilt.jpg">    
+</a-assets>
+
+<a-assets>
+<img id="KQuilt"
+src="assets/Quilt/KQuilt.jpg">    
+</a-assets>
+
+<a-assets>
+<img id="LQuilt"
+src="assets/Quilt/LQuilt.jpg">
+</a-assets>
+-->
+
+
+
+    <body style="margin: 0; overflow: hidden;">
+        <a-scene
+                 vr-mode-ui="enabled: false"
+                 embedded/
+                 arjs="sourceType: webcam; debugUIEnabled: false;"
+                 >
+
+
+            <!--
+<a-assets timeout="3000">
+<img id="livingRoom" src="assets/06_GMyers1963_LR_NW.jpg">
+</a-assets> 
+
+                     -      coordinates of Albert's home:       42.925235, -78.847216
+                     -      coordinates of apartment:           42.944817,-78.828122
+-->
+
+
+
+            <a-assets>
+                <a-asset-item id="AQuilt2-obj" src="assets/Quilt/AQuilt2.obj"></a-asset-item>
+                <a-asset-item id="AQuilt2-mtl" src="assets/Quilt/AQuilt2.mtl"> </a-asset-item>
+                <img id="my-texture" src="assets/quilt/jpg/AQuilt.jpg">
+            </a-assets>
+
+            <a-entity scale= "1 1 1"
+                      position= "0 0 0"
+                      rotation= "0 0 0"
+                      scale="1 1 1"
+                      gps-entity-place="latitude: 42.944817; longitude: -78.828122;" 
+                      obj-model="obj:#AQuilt2-obj; mtl:#AQuilt2-mtl"
+                      material="src: #my-texture"
+                      >
+                    
+            </a-entity>
+
+
+            <!--
+<a-image 
+src="assets/Quilt/AQuilt.jpg"
+position="0 0 0"
+rotation="180 0 0"
+scale="8.73 2.2 0"
+gps-entity-place="latitude: 42.925235; longitude: -78.847216;">
+</a-image>
+
+-->
+
+            <!--
+<a-image src="#livingRoom"
+position="0 0 0"
+rotation="0 0 0"
+scale="1.5 1.5 1.5"
+gps-entity-place="latitude: 42.925235; longitude: -78.847216;"
+animation="property: material.opacity; from: 0.15; to: 0.95; loop: true; dir: alternate; dur: 1000">
+</a-image>
+
+
+
+<a-text
+value="This content will always face you."
+scale="50 50 50"
+gps-entity-place="latitude: 42.925235; longitude: -78.847216;"
+animation="property: material.opacity; from: 0.15; to: 0.95; loop: true; dir: alternate; dur: 1000"
+></a-text>
+
+<a-text
+value="This content will always face you."
+scale="50 50 50"
+position="0 0 5"
+gps-entity-place="latitude: 42.925235; longitude: -78.847216;"
+></a-text>
+
+
+
+<a-text
+value="This content will always face you."
+scale="50 50 50"
+position="0 0 10"
+gps-entity-place="latitude: 42.925235; longitude: -78.847216;"
+></a-text>
+
+
+
+
+<a-text
+value="This content will always face you."
+scale="50 50 50"
+position="0 0 20"
+gps-entity-place="latitude: 42.925235; longitude: -78.847216;"
+></a-text>
+-->
+
+
+            <!--            <a-camera gps-camera rotation-reader> </a-camera>-->
+            <a-camera gps-camera> </a-camera>
+        </a-scene>
+    </body>
+</html>
